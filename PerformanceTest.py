@@ -13,7 +13,7 @@ def singleHttpRequests():
     median = 0.0;
     for item in range(10):
         before = datetime.datetime.now()
-        r = requests.get("https://api.oiads.com.br/score/address/v1")
+        r = requests.get("URL")
         after = datetime.datetime.now()
         span = after - before
         print(f"{r.status_code}  -  {span.microseconds / 1000}") 
@@ -32,7 +32,7 @@ def multipleHttpRequests():
     
     for item in range(10):
         before = datetime.datetime.now()
-        r = session.get("https://api.oiads.com.br/score/address/v1")
+        r = session.get("URL")
         after = datetime.datetime.now()
         span = after - before
         print(f"{r.status_code}  -  {span.microseconds / 1000}") 
